@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	TXT by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Nirmaan CSR</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href=" {% static 'assets/css/main.css' %} " />
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1><a href=" {% static 'index.html' %} " id="logo">Nirmaan CSR</a></h1>
+							<p>Towards a Better Future</p>
+						</div>
+					</div>
+				</header>
+
+			
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="/">Home</a></li>
+						{% if user.is_authenticated %}
+							<li>
+								<a href="#">Contacts</a>
+								<ul>
+									<li><a href="{% url 'main:contact-table' %}">View All</a></li>
+									<li><a href="{% url 'main:contact-create' %}">Create New</a></li>
+									
+								</ul>
+							</li>
+						{% endif %}
+						
+						{% if user.is_authenticated %}
+							<li><a href=" {% url 'logout' %} ">Logout</a></li>
+						{% else %}
+							<li><a href=" {% url 'login' %} ">Login</a></li>
+						{% endif %}
+					</ul>
+				</nav>
+
+			
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="content">
+									
+									{% block content %}{% endblock %}
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+				<footer id="footer">
+					<div class="container">
+						<div class="row gtr-200">
+							<div id="copyright">
+								<ul class="menu">
+									<li>Made with &hearts; by Nirmaan PRD</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</footer>
+
+					
+				
+
+		</div>
+
+		<!-- Scripts -->
+			<script src=" {% static 'assets/js/jquery.min.js' %} "></script>
+			<script src=" {% static 'assets/js/jquery.dropotron.min.js' %} "></script>
+			<script src=" {% static 'assets/js/jquery.scrolly.min.js' %} "></script>
+			<script src=" {% static 'assets/js/browser.min.js' %} "></script>
+			<script src=" {% static 'assets/js/breakpoints.min.js' %} "></script>
+			<script src=" {% static 'assets/js/util.js' %} "></script>
+			<script src=" {% static 'assets/js/main.js' %} "></script>
+		{% block js %}
+		{% endblock js %}
+	</body>
+</html>

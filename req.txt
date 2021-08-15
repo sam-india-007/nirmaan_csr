@@ -1,0 +1,14 @@
+Online Database Manager:
+
+*CRUD contacts
+- Contact
+  > Name of company
+  > Name of person
+  > Email/Number
+  > Assign Status
+*Appropriate search filters
+*Option to solve mail templates
+*Update Status of CSR Contracts/MoUs
+*Admin can allot a specific user a contact, both admin and user perform status updates
+*Excel Download (With/Without applied filters)
+* Any change in status, mail to be sent to user/admin of respective task ( use free Sendgrid)
