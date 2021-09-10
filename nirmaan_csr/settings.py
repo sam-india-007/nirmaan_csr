@@ -27,7 +27,7 @@ SECRET_KEY = '769=f6(e7mv0!d+pip7=e#ihi9kik*@*mx$pbnzu(gt$9s%^+s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['139.59.38.254', '127.0.0.1']
+ALLOWED_HOSTS = ['139.59.38.254', '127.0.0.1', 'bitspilani.nirmaan.org/database']
 
 
 # Application definition
