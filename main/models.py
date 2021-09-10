@@ -30,12 +30,12 @@ class Contact(models.Model):
                     company = self.company
                     to = self.author.email
                     message = Mail(
-                    from_email='f20200021@pilani.bits-pilani.ac.in',
+                    from_email='samriddhasinha@gmail.com',
                     to_emails = To(to),
                     subject='Nirmaan CSR | Status Update',
                     html_content='Status of contact '+company+' has been changed from <b>'+old_status+'</b> to <b>'+new_status+'</b>')
                     try:
-                        sg = SendGridAPIClient('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')
+                        sg = SendGridAPIClient('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')
                         response = sg.send(message)
                         print(response.status_code)
                         print(response.body)
