@@ -11,6 +11,7 @@
                 <tr>
                     <th>Company</th>
                     <th>Person</th>
+                    <th>Description</th>
                     <th>Email</th>
                     <th>Number</th>
                     <th>Status</th>
@@ -23,6 +24,7 @@
                     <tr>
                         <TD class="c3" align="center"><a href="{% url 'main:contact-detail' c.id%}">{{ c.company }}</TD>
                         <TD class="c3" align="center">{{ c.person }}</TD>
+                        <TD class="c3" align="center">{{ c.desc }}</TD>
                         <TD class="c3" align="left">{{ c.email }}</TD>
                         <TD class="c3" align="center">{{ c.number }}</TD>
                         <TD class="c3" align="center" >{{ c.status }}</TD>

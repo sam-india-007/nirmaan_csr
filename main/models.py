@@ -9,6 +9,7 @@ from sendgrid.helpers.mail.to_email import To
 class Contact(models.Model):
     company = models.CharField(max_length=200)
     person = models.CharField(max_length=100)
+    desc = models.TextField()
     email = models.EmailField()
     number = models.CharField(max_length=15)
     status = models.CharField(max_length=100)

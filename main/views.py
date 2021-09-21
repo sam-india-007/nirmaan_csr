@@ -44,7 +44,7 @@ class ContactDetailView(DetailView):
 
 class ContactCreateView(LoginRequiredMixin, CreateView):
     model = Contact
-    fields = ['company', 'person', 'email', 'number', 'status']
+    fields = ['company', 'person', 'desc', 'email', 'number', 'status']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
