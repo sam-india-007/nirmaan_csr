@@ -36,7 +36,7 @@ class Contact(models.Model):
                     subject='Nirmaan CSR | Status Update',
                     html_content='Status of contact '+company+' has been changed from <b>'+old_status+'</b> to <b>'+new_status+'</b>')
                     try:
-                        sg = SendGridAPIClient('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')
+                        sg = SendGridAPIClient('secret')
                         response = sg.send(message)
                         print(response.status_code)
                         print(response.body)
