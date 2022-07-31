@@ -23,7 +23,7 @@ def test_mail (request):
     subject='Campus Reopening',
     html_content='<strong>lmao fr?</strong>')
     try:
-        sg = SendGridAPIClient('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')
+        sg = SendGridAPIClient('secret')
         response = sg.send(message)
         print(response.status_code)
         print(response.body)
